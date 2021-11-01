@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import DogList from "./DogList";
-import DogDetails from "./DogDetails";
+import FilterDogDetails from "./FilterDogDetails";
 import whiskey from "./images/whiskey.jpg";
 import duke from "./images/duke.jpg";
 import perry from "./images/perry.jpg";
@@ -16,7 +16,7 @@ function App({ dogs }) {
             <DogList dogs={dogs} />
           </Route>
           <Route path="/dogs/:name">
-            <DogDetails />
+            <FilterDogDetails dogs={dogs} />
           </Route>
           <Redirect to="/dogs" />
         </Switch>
